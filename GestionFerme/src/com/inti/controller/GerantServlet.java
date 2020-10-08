@@ -7,25 +7,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.init.entities.Employe;
+import com.inti.entities.Gerant;
 import com.inti.services.impl.ManagerService;
 import com.inti.services.interfaces.IService;
 
 @WebServlet("/accueil")
-public class EmployeServlet extends HttpServlet {
+public class GerantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	IService<Employe> employeService = new ManagerService<>();
+	IService<Gerant> GerantService = new ManagerService<>();
 	
    
-    public EmployeServlet() {
+    public GerantServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("employes", employeService.findAll(Employe.class));
+		request.setAttribute("Gerants", GerantService.findAll(Gerant.class));
 		request.getRequestDispatcher("accueil.jsp").forward(request, response);
 	}
 
