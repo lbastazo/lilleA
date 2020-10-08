@@ -10,7 +10,7 @@
 	<form action="login" method="POST">
 	<div>
 		<label>Login</label> <input type="text" name="Login"
-			placeholder="Nomd'utilisateur...">
+			placeholder="Nom d'utilisateur...">
 	</div>
 
 	<div>
@@ -18,14 +18,14 @@
 			placeholder="Mot de Passe ...">
 	</div>
 
-	<h4 style="color: red; text-align: center">${msg}</h4>
+	<!-- <h4 style="color: red; text-align: center">${msg}</h4> -->
 
 	<div>
 		<input type="submit" value="Se connecter !!!">
 	</div>
 
 	<div>
-		<a href="register.jsp"> Créer votre compte</a>
+		<a href="register.jsp">Créer votre compte</a>
 	</div>
 	</form>
 

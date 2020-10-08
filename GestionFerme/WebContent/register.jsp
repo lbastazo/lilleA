@@ -12,25 +12,25 @@
 <span>Créer votre compte</span>
 
 	<div>
-	<label> nom : </label>
+	<label>Nom : </label>
 	<input type="text" name="nom">
 	</div>
 	
 	<div>
-		<label>prenom :	</label>
+		<label>Prénom :	</label>
 	<input type="text" name="prenom">
 	</div>
 	
 	<div>
-		<label>birthday : </label>
+		<label>Date de naissance : </label>
 	<input type="text" name="dateN"></div>
 	
 	<div>
-		<label>login : </label>
+		<label>Identifiant : </label>
 	<input type="text" name="Login"></div>
 	
 	<div>
-		<label>mot de passe :</label>
+		<label>Mot de passe :</label>
 	<input type="password" name="password"></div>
 	
 	<div>
