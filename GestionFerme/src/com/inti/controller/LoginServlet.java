@@ -7,14 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.init.entities.Employe;
-import com.inti.services.impl.EmployeService;
-import com.inti.services.interfaces.IEmployeService;
+import com.inti.entities.Gerant;
+import com.inti.services.impl.GerantService;
+import com.inti.services.interfaces.IGerantService;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    IEmployeService employeService = new EmployeService();
+    IGerantService GerantService = new GerantService();
     
  
     public LoginServlet() {
@@ -31,11 +31,11 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String login=request.getParameter("login");
 		String password=request.getParameter("password");
-		if(employeService.findWithLoginAndPassword(login, password) != null) {
-			request.setAttribute("employes", employeService.findAll(Employe.class));
+		if(GerantService.findWithLoginAndPassword(login, password) != null) {
+			request.setAttribute("Gerants", GerantService.findAll(Gerant.class));
 			request.setAttribute("log",
-					"Bonjour Mr Yugo" + employeService.findWithLoginAndPassword(login, password).getNomEmploye()
-					+" - "+ employeService.findWithLoginAndPassword(login, password).getPrenomEmploye() );
+					"Bonjour" + ((Gerant) GerantService.findWithLoginAndPassword(login, password)).getNom()
+					+" - "+ ((Gerant) GerantService.findWithLoginAndPassword(login, password)).getPrenom() );
 		request.getRequestDispatcher("accueil.jsp").forward(request, response);
 		}else {
 			request.setAttribute("msg", "login ou password incorrect");
