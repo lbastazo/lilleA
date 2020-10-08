@@ -11,7 +11,7 @@ import com.inti.entities.Gerant;
 import com.inti.services.impl.GerantService;
 import com.inti.services.interfaces.IGerantService;
 
-@WebServlet("/login")
+// @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     IGerantService GerantService = new GerantService();
