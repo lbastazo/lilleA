@@ -21,7 +21,7 @@ public class Gerant  implements Serializable{
 	private  static  final  long serialVersionUID = 1L;
 	
 	@ManyToOne
-	private Gerant Ferme;
+	private Ferme ferme;
 
 	public Gerant() {
 		super();
@@ -51,14 +51,15 @@ public class Gerant  implements Serializable{
 		this.prenom = prenom;
 	}
 
-	public Gerant getFerme() {
-		return Ferme;
+	public Ferme getFerme() {
+		return ferme;
 	}
 
-	public void setFerme(Gerant ferme) {
-		Ferme = ferme;
+	public void setFerme(Ferme ferme) {
+		this.ferme = ferme;
 	}
-	
+
+
 	
 }
 

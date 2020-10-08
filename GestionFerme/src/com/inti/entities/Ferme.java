@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Ferme  implements Serializable{
@@ -20,8 +21,12 @@ public class Ferme  implements Serializable{
 	private  static  final  long serialVersionUID = 1L;
 	
 	@OneToMany
-	private Ferme Animal;
-
+	private Animal animal;
+	@OneToOne
+	private Gerant gerant;
+	@OneToOne
+	private Departement departement;
+	
 	public Ferme() {
 		super();
 	}
@@ -50,13 +55,29 @@ public class Ferme  implements Serializable{
 		this.dateAchat = dateAchat;
 	}
 
-	public Ferme getAnimal() {
-		return Animal;
+	public Animal getAnimal() {
+		return animal;
 	}
 
-	public void setAnimal(Ferme animal) {
-		Animal = animal;
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
 	}
 
-	
+	public Gerant getGerant() {
+		return gerant;
+	}
+
+	public void setGerant(Gerant gerant) {
+		this.gerant = gerant;
+	}
+
+	public Departement getDepartement() {
+		return departement;
+	}
+
+	public void setDepartement(Departement departement) {
+		this.departement = departement;
+	}
+
+
 }
