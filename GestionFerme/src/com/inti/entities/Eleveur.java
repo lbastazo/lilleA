@@ -20,7 +20,7 @@ public class Eleveur  implements Serializable{
 	private  static  final  long serialVersionUID = 1L;
 	
 	@OneToMany
-	private Eleveur Animal;
+	private Animal animal;
 
 	public Eleveur() {
 		super();
@@ -58,13 +58,15 @@ public class Eleveur  implements Serializable{
 		this.statut = statut;
 	}
 
-	public Eleveur getAnimal() {
-		return Animal;
+	public Animal getAnimal() {
+		return animal;
 	}
 
-	public void setAnimal(Eleveur animal) {
-		Animal = animal;
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
 	}
+
+
 	
 	
 }
