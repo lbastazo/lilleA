@@ -4,24 +4,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Connexion</title>
 </head>
 <body>
-	<form action="login" method="POST">
+	<H1>Se connecter</H1>
+	<form action="accueil.jsp" method="POST">
+	
 	<div>
-		<label>Login</label> <input type="text" name="Login"
-			placeholder="Nom d'utilisateur...">
+		<label>Identifiant</label> <input type="text" name="login"
+			placeholder="Identifiant...">
 	</div>
 
 	<div>
-		<label> Password </label> <input type="password" name="password"
+		<label>Mot de passe</label> <input type="password" name="password"
 			placeholder="Mot de Passe ...">
 	</div>
 
-	<!-- <h4 style="color: red; text-align: center">${msg}</h4> -->
+	<h4 style="color: red; text-align: center">${msg}</h4> 
 
 	<div>
-		<input type="submit" value="Se connecter !!!">
+		<input type="submit" value="S'identifier">
 	</div>
 
 	<div>
