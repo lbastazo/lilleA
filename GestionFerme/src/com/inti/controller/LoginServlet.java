@@ -33,8 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String password=request.getParameter("password");
 		if(GerantService.findWithLoginAndPassword(login, password) != null) {
 			request.setAttribute("Gerants", GerantService.findAll(Gerant.class));
-			request.setAttribute("log",
-					"Bonjour" + ((Gerant) GerantService.findWithLoginAndPassword(login, password)).getNom()
+			request.setAttribute("log", "Bonjour" + ((Gerant) GerantService.findWithLoginAndPassword(login, password)).getNom()
 					+" - "+ ((Gerant) GerantService.findWithLoginAndPassword(login, password)).getPrenom() );
 		request.getRequestDispatcher("accueil.jsp").forward(request, response);
 		}else {

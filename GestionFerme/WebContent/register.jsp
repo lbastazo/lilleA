@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Register</title>
+<title>Inscription</title>
 </head>
 <body>
-
-<form action="register" method="POST"> </form>
-<span>Créer votre compte</span>
+<H1>Création de compte</H1>
+<form action="accueil.jsp" method="POST"> </form>
 
 	<div>
 	<label>Nom : </label>
